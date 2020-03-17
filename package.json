@@ -1,5 +1,5 @@
 {
-  "name": "super-cli",
+  "name": "superblocks-cli",
   "version": "0.0.1",
   "description": "Superblocks CLI",
   "main": "dist/index.js",
