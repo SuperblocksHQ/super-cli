@@ -1,0 +1,27 @@
+version: 1
+jobs:
+  run_tests:
+    image: node:10
+    script:
+      - npm i
+      - npm run test
+
+  deploy_to_npm:
+    image: node:10
+    script:
+      - npm i
+      - npm run build
+      - npm install -g npm-cli-login
+      - npm-cli-login -u $NPM_USER -p $NPM_PASSWORD -e $NPM_EMAIL
+      - npm run publish-lib 
+
+stages:
+  - test:
+      jobs:
+        - run_tests
+  - deploy:
+      jobs:
+        - deploy_to_npm:
+            filters:
+              only:
+                - master

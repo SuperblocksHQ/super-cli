@@ -1,0 +1,45 @@
+{
+  "name": "super-cli",
+  "version": "0.0.1",
+  "description": "Superblocks CLI",
+  "main": "dist/index.js",
+  "bin": {
+    "super": "dist/index.js"
+  },
+  "scripts": {
+    "collect": "collect-artifacts",
+    "build": "tsc",
+    "publish-lib": "node publish.js",
+    "test": "mocha --require ts-node/register --exit src/**/*spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperblocksHQ/super-cli.git"
+  },
+  "author": "Superblocks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperblocksHQ/super-cli/issues"
+  },
+  "homepage": "https://github.com/SuperblocksHQ/super-cli#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.5",
+    "@types/chai-as-promised": "^7.1.2",
+    "@types/ethereum-protocol": "^1.0.0",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.7.0",
+    "@types/node-fetch": "^2.5.3",
+    "@types/yargs": "^15.0.4",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.2.2",
+    "ts-node": "^8.5.4",
+    "ts-sinon": "^1.0.24",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "yargs": "^15.3.1"
+  }
+}
