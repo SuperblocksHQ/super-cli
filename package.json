@@ -1,10 +1,11 @@
 {
   "name": "superblocks-cli",
-  "version": "0.0.1",
+  "version": "0.0.1-beta.1",
   "description": "Superblocks CLI",
   "main": "dist/index.js",
   "bin": {
-    "super": "dist/index.js"
+    "super": "dist/index.js",
+    "superblocks-cli": "dist/index.js"
   },
   "scripts": {
     "collect": "collect-artifacts",
