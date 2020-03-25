@@ -4,6 +4,9 @@
 
 Superblocks CLI tool to be used with [Superblocks platform](https://superblocks.com/).
 
+## Supported Framworks
+- Truffle
+
 ## Installation
 
 Superblocks CLI can be installed or used using npx. In order to install run:
