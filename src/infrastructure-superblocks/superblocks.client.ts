@@ -27,7 +27,7 @@ export const superblocksClient: ISuperBlocksClient = {
                 'Content-Type': 'application/json',
                 'project-token': token
             },
-            body:  JSON.stringify({artifacts: artifactsObject.artifactsList}) ,
+            body:  JSON.stringify(artifactsObject.artifactsList),
         });
 
         if (response.ok) {
