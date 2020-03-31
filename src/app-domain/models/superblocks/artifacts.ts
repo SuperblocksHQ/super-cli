@@ -2,6 +2,8 @@ import { IABI } from '../truffle';
 
 export interface IArtifactsModel {
     contractName: string;
+    transactionHash: string;
+    contractAddress: string;
     abi: IABI[];
     metadata: string;
     bytecode: string;

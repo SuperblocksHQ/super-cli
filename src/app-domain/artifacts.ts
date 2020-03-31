@@ -1,4 +1,4 @@
-import { ITruffleBuild, IArtifactsModel } from './models';
+import { ITruffleBuild, IArtifactsModel, INetwork } from './models';
 
 export class Artifacts {
     private readonly _deploymentId: string;
@@ -11,7 +11,16 @@ export class Artifacts {
         this._deploymentId = deploymentId;
         this._artifacts = artifacts.map<IArtifactsModel>(a => {
             const { contractName, abi, metadata, bytecode, sourceMap } = a;
-            return { contractName, abi, metadata, bytecode, sourceMap };
+            const networkUsed: string = Object.getOwnPropertyNames(a.networks)[0];
+
+            // @ts-ignore
+            const { transactionHash, address }: INetwork = a.networks[networkUsed];
+
+            if (!transactionHash || !address) {
+                throw new Error('Network not found');
+            }
+
+            return { contractName, abi, metadata, bytecode, sourceMap, contractAddress: address, transactionHash };
         });
     }
 

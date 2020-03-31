@@ -1,6 +1,6 @@
 {
   "name": "superblocks-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Superblocks CLI",
   "main": "dist/index.js",
   "bin": {
