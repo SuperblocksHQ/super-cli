@@ -20,7 +20,7 @@ export class Artifacts {
                 throw new Error('Network not found');
             }
 
-            return { contractName, abi, metadata, bytecode, sourceMap, contractAddress: address, transactionHash };
+            return { contractName, abi, metadata, bytecode, sourceMap, contractAddress: address, transactionHash, networkId: networkUsed };
         });
     }
 
